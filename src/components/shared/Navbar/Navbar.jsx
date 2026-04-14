@@ -30,7 +30,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" shadow">
+    <nav className="bg-white shadow">
       <div className="flex justify-between px-5
       gap-5 items-center lg:py-5 py-4 container mx-auto">
         <div>
