@@ -1,23 +1,23 @@
+'use client';
 import React from "react";
+import { useFriends } from "@/context/FriendsContext";
 
-const friendsPromise = async function () {
-  const res = await fetch("http://localhost:3000/friends.json");
-  const apps = await res.json();
-  return apps;
-};
-
-const SummaryCard = async () => {
-  const apps = await friendsPromise();
-  const onTrack = apps.filter((app) => app.status === "on-track").length;
-  const almostDue = apps.filter(
-    (app) => app.status === "almost due" || app.status === "overdue",
-  ).length;
+const SummaryCard = () => {
+  const { friends, timeline } = useFriends();
+  
+  const onTrack = friends.filter((app) => app.status === "on-track").length;
+  const almostDue = friends.filter((app) => app.status === "almost due").length;
+  const overdue = friends.filter((app) => app.status === "overdue").length;
+  
+  // Just use a subset of timeline if needed, or simply count overdue
+  // The Figma seems to just say "Overdue This Month".
+  // We'll map exactly to what Figma implies (Total, On Track, Almost Due, Overdue).
 
   const summaryData = [
     {
       id: 1,
-      item: apps.length,
-      name: " Total Friends",
+      item: friends.length,
+      name: "Total Friends",
     },
     {
       id: 2,
@@ -27,12 +27,12 @@ const SummaryCard = async () => {
     {
       id: 3,
       item: almostDue,
-      name: "Need Attention",
+      name: "Almost Due",
     },
     {
       id: 4,
-      item: "12",
-      name: "Interactions This Month",
+      item: overdue,
+      name: "Overdue",
     },
   ];
 
@@ -47,7 +47,7 @@ const SummaryCard = async () => {
             key={data.id}
             className="flex flex-col items-center justify-center
                border border-gray-100 space-y-2 py-4
-                bg-white shadow-lg rounded-lg  transition delay-150 duration-300 ease-in-out hover:-translate-y hover:scale-95 hover:bg-white  "
+                bg-white shadow-lg rounded-lg  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-white  "
           >
             <h3 className="text-2xl text-[#244D3F] font-semibold">
               {data.item}

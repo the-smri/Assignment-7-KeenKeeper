@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav className=" shadow">
-      <div className="flex flex-wrap justify-center lg:justify-between 
+      <div className="flex justify-between px-5
       gap-5 items-center lg:py-5 py-4 container mx-auto">
         <div>
           <Image

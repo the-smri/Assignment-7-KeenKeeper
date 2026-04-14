@@ -10,8 +10,8 @@ const Banner = () => {
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the relationships that matter most.
         </p>
-        <button className="btn bg-green-950 px-5 py-2 rounded-lg text-white" >
-          <FaPlus /> Add a Friends
+        <button className="btn bg-[#244D3F] hover:bg-[#1a382e] border-none px-5 py-2 rounded-lg text-white" >
+          <FaPlus /> Add a Friend
         </button>
       </div>
     </div>

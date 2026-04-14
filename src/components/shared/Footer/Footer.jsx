@@ -48,7 +48,7 @@ const Footer = () => {
 
         {/* Bottom Section: Copyright */}
         <div className="text-center text-xs text-gray-400">
-          Copyright © 2026 - All right reserved Md Tanvirul Islam
+          Copyright © - All right reserved S M Raisul Islam
         </div>
       </div>
     </footer>

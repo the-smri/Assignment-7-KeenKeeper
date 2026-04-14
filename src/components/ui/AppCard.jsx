@@ -14,7 +14,7 @@ const AppCard = ({ app }) => {
     <div>
       <Link
         href={`/friend-apps/${app.id}`}
-        className="card  flex flex-col items-center justify-center border border-gray-100  py-8 bg-white shadow-lg rounded-lg space-y-3 "
+        className="card  flex flex-col items-center justify-center border border-gray-100  py-8 bg-white shadow-lg rounded-lg space-y-3 transition transform hover:scale-105"
       >
         <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
           <Image
@@ -25,11 +25,15 @@ const AppCard = ({ app }) => {
             height={64}
           />
         </div>
-        <h3 className="text-2xl text-[#244D3F] font-semibold">{app.name}</h3>
+        <h3 className="text-xl text-[#244D3F] font-semibold">{app.name}</h3>
+
+        <div className="text-sm text-gray-500 font-semibold">
+          {app.days_since_contact} Days Ago
+        </div>
 
         <div className="flex items-center gap-3">
           {app.tags.map((tag, index) => (
-            <div key={index} className="badge badge-success text-[#244D3F]">
+            <div key={index} className="badge badge-success badge-outline text-[#244D3F]">
               {tag}
             </div>
           ))}
