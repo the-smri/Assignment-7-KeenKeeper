@@ -31,8 +31,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow">
-      <div className="flex flex-col md:flex-row items-center justify-between px-5 py-4 lg:py-5 container mx-auto gap-4 md:gap-0">
-        <div className="md:flex-1 flex justify-start">
+      <div className="flex flex-col md:flex-row items-center justify-between px-5 py-4 lg:py-5 container mx-auto gap-4">
+        <div className="flex justify-center md:justify-start">
           <Image
             src={logo}
             alt="KeenKeeper"
@@ -42,7 +42,7 @@ const Navbar = () => {
           />
         </div>
 
-        <div className="flex-grow md:flex-1 flex justify-center">
+        <div className="flex justify-center md:justify-end">
           <ul className="flex gap-4 sm:gap-6 md:gap-8 items-center">
             {navItems.map((item, index) => (
               <MyLink key={index} href={item.path}>
@@ -50,10 +50,6 @@ const Navbar = () => {
               </MyLink>
             ))}
           </ul>
-        </div>
-
-        <div className="hidden md:flex md:flex-1 justify-end">
-          {/* Balancing element for desktop centering */}
         </div>
       </div>
     </nav>
