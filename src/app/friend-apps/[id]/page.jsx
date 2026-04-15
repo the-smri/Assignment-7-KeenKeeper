@@ -47,7 +47,7 @@ const FriendsDetailPage = ({ params }) => {
             />
             <h2 className="text-2xl font-bold text-[#244D3F]">{friend.name}</h2>
             <div className={`px-4 py-1 rounded-2xl font-bold text-sm capitalize ${statusColor[friend.status]}`}>
-              {friend.status === 'almost due' ? 'Need Attention' : friend.status === 'on-track' ? 'On Track' : 'Overdue'}
+              {friend.status === 'almost due' ? 'Almost Due' : friend.status === 'on-track' ? 'On Track' : 'Overdue'}
             </div>
           </div>
 
