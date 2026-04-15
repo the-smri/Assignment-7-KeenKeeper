@@ -118,5 +118,29 @@
     "bio": "HR from my previous company in Motijheel. Extremely helpful and supportive during my job period there.",
     "goal": 14,
     "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 11,
+    "name": "Tariqul Islam",
+    "picture": "https://i.pravatar.cc/150?u=tariqul",
+    "email": "tariqul.islam@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["photography", "travel"],
+    "bio": "Travel photographer. We met during a photography walk in Old Dhaka.",
+    "goal": 14,
+    "next_due_date": "2026-04-27"
+  },
+  {
+    "id": 12,
+    "name": "Farhana Zaman",
+    "picture": "https://i.pravatar.cc/150?u=farhana",
+    "email": "farhana.zaman@gmail.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["book club", "colleague"],
+    "bio": "Fellow reader from the Gulshan book club. Started working together recently.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
   }
 ]
