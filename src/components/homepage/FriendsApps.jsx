@@ -7,10 +7,10 @@ const FriendsApps = () => {
   const { friends, loading } = useFriends();
 
   return (
-    <div className=" container mx-auto px-5 py-10 ">
-      <h5 className="text-balance font-medium py-2">
+    <div className="container mx-auto px-5 py-10 max-w-6xl">
+      <h2 className="text-xl font-bold text-slate-800 mb-6">
         Your Friends
-      </h5>
+      </h2>
       {loading ? (
         <div className="flex justify-center items-center py-20">
           <span className="loading loading-spinner text-success loading-lg"></span>

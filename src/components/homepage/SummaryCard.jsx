@@ -37,7 +37,7 @@ const SummaryCard = () => {
   ];
 
   return (
-    <div className="container mx-auto px-5">
+    <div className="container mx-auto px-5 max-w-6xl">
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
        items-center justify-center gap-3 pb-15 pt-5 border-b-2 border-gray-100"
@@ -46,13 +46,13 @@ const SummaryCard = () => {
           <div
             key={data.id}
             className="flex flex-col items-center justify-center
-               border border-gray-100 space-y-2 py-4
-                bg-white shadow-lg rounded-lg  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:bg-white  "
+               border-none py-10
+                bg-white shadow-sm rounded-lg transition transform hover:-translate-y-1"
           >
-            <h3 className="text-2xl text-[#244D3F] font-semibold">
+            <h3 className="text-3xl text-[#244D3F] font-bold">
               {data.item}
             </h3>
-            <p className="text-[#64748B]">{data.name}</p>
+            <p className="text-[#64748B] text-sm mt-1">{data.name}</p>
           </div>
         ))}
       </div>
