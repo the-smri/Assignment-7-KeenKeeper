@@ -1,22 +1,25 @@
-# KeenKeeper
+1. KeenKeeper
+KeenKeeper is a simple and responsive app to help you keep track of your important relationships. Think of it like a personal space where you can organize, check in, and stay connected with the people who matter most.
 
-**KeenKeeper** is a highly responsive personal relationship tracker. It acts as a customized "shelf of meaningful connections" where users can browse, tend, and nurture the relationships that matter most.
+2. Technologies Used
+React.js / Next.js – for building the interface and navigation
+Tailwind CSS + DaisyUI – for clean and modern design
+Recharts – to visualize your interaction data
+react-hot-toast – for smooth notifications
+React Context API & LocalStorage – to manage and save data
+Key Features
 
-## Technologies Used
-- **React.js / Next.js (App Router)** - UI Structure & Page Navigation
-- **Tailwind CSS + DaisyUI** - Styling and layout frameworks
-- **Recharts** - For the Friendship Analytics data visualization
-- **react-hot-toast** - Smooth toast notifications
-- **React Context API & LocalStorage** - State management and persistence
+3. Easy Check-Ins
+Quickly log interactions like calls, texts, or video chats from a friend’s profile.
 
-## 3 Key Features
-1. **Interactive Check-Ins**: Instantly record interactions (Call, Text, Video) directly from the friend’s dashboard.
-2. **Sortable & Filterable Timeline**: Every mapped action creates a chronological log in your timeline which features real-time category filtering.
-3. **Friendship Analytics**: Data visualization automatically generated across your recorded actions to track your communication habits visually.
+4. Timeline View
+All your activities are saved in a timeline, where you can sort and filter them easily.
 
-## Getting Started
+5. Simple Analytics
+See visual insights of your communication habits through automatic charts.
 
-1. Clone or download the repository.
-2. Run `npm install` to gather the project dependencies.
-3. Use `npm run dev` to start the live development server.
-4. Navigate to `http://localhost:3000` locally.
+Getting Started
+Download or clone the project
+Run npm install
+Start the app with npm run dev
+Open http://localhost:3000 in your browser
