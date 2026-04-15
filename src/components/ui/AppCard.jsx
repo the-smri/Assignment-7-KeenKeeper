@@ -41,7 +41,7 @@ const AppCard = ({ app }) => {
           className={`font-semibold text-xs px-4 mt-1
              py-1 rounded-full ${statusColor[app.status]}`}
         >
-          {app.status === 'on-track' ? 'On Track' : app.status === 'almost due' ? 'Almost Due' : 'Overdue'}
+          {app.status === 'on-track' ? 'On Track' : app.status === 'almost due' ? 'Need Attention' : 'Overdue'}
         </div>
       </Link>
     </div>

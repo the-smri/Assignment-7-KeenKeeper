@@ -7,7 +7,12 @@ const SummaryCard = () => {
   
   const onTrack = friends.filter((app) => app.status === "on-track").length;
   const almostDue = friends.filter((app) => app.status === "almost due").length;
-  const overdue = friends.filter((app) => app.status === "overdue").length;
+  
+  const interactionsThisMonth = timeline.filter(item => {
+    const itemDate = new Date(item.date);
+    const now = new Date();
+    return itemDate.getMonth() === now.getMonth() && itemDate.getFullYear() === now.getFullYear();
+  }).length;
   
   // Just use a subset of timeline if needed, or simply count overdue
   // The Figma seems to just say "Overdue This Month".
@@ -27,12 +32,12 @@ const SummaryCard = () => {
     {
       id: 3,
       item: almostDue,
-      name: "Almost Due",
+      name: "Need Attention",
     },
     {
       id: 4,
-      item: overdue,
-      name: "Overdue",
+      item: interactionsThisMonth,
+      name: "Interactions This Month",
     },
   ];
 
