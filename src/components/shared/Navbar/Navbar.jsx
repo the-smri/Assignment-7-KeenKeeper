@@ -31,29 +31,30 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow">
-      <div className="flex justify-between px-5
-      gap-5 items-center lg:py-5 py-4 container mx-auto">
-        <div>
+      <div className="flex flex-col md:flex-row items-center justify-between px-5 py-4 lg:py-5 container mx-auto gap-4 md:gap-0">
+        <div className="md:flex-1 flex justify-start">
           <Image
             src={logo}
             alt="KeenKeeper"
             width={200}
             height={50}
+            className="w-40 md:w-[200px]"
           />
-          
         </div>
 
-       <div>
-         <ul className="flex justify-between gap-8 items-center ">
-          {navItems.map((item, index) => (
-            // Client component
-            <MyLink key={index} href={item.path}>
-             {item.icon} {item.text} 
-            </MyLink>
-          ))}
-        </ul>
-        
-       </div>
+        <div className="flex-grow md:flex-1 flex justify-center">
+          <ul className="flex gap-4 sm:gap-6 md:gap-8 items-center">
+            {navItems.map((item, index) => (
+              <MyLink key={index} href={item.path}>
+                {item.icon} {item.text}
+              </MyLink>
+            ))}
+          </ul>
+        </div>
+
+        <div className="hidden md:flex md:flex-1 justify-end">
+          {/* Balancing element for desktop centering */}
+        </div>
       </div>
     </nav>
   );
